@@ -6,17 +6,22 @@ chi programma parlando.
 ## Installazione
 
 ```bash
-brew install --cask --no-quarantine aiempol/ciacoea/ciacoea
+brew install --cask aiempol/ciacoea/ciacoea
 ```
 
-`--no-quarantine` non è un dettaglio: senza, macOS marca l'app come scaricata da
-internet e al primo avvio mostra l'avviso «Apple non ha potuto verificare che sia
-libero da malware», che poi si sblocca solo passando dalle Impostazioni di Sistema.
-Con quel flag l'app si apre e basta.
+## Il primo avvio
 
-Il motivo per cui serve è che ciàcoea **non è notarizzata da Apple**: è firmata, ma con
-un certificato nostro, non con un Developer ID. Il codice è quello che è: se preferisci
-non fidarti, [scarica il `.dmg`](https://ciacoea.com/scarica/) e sbloccalo a mano.
+Al primo avvio macOS dirà che «Apple non ha potuto verificare che sia libero da
+malware». Non riguarda ciàcoea in particolare: lo dice di qualsiasi app non
+notarizzata da Apple. ciàcoea **è firmata**, ma con un certificato nostro, non con un
+Developer ID.
+
+Per sbloccarla: *Impostazioni di Sistema → Privacy e sicurezza*, in fondo alla
+sezione **Sicurezza**, premi **Apri comunque**.
+
+Installare con `brew` **non evita** questo passaggio. Fino a Homebrew 5 c'era
+`--no-quarantine`; Homebrew 6 l'ha rimosso di proposito, e la variabile
+`HOMEBREW_CASK_OPTS` non lo sostituisce.
 
 ## Aggiornamenti
 
