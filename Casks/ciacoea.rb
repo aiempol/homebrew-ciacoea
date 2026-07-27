@@ -9,7 +9,7 @@ cask "ciacoea" do
 
   # Solo Apple Silicon per ora: il build Intel non c'è ancora.
   depends_on arch: :arm64
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   # ciàcoea si aggiorna da sé leggendo ciacoea.com/scarica/latest.json,
   # quindi Homebrew non deve metterci le mani: farebbe due meccanismi che
