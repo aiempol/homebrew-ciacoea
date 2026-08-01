@@ -1,6 +1,6 @@
 cask "ciacoea" do
-  version "0.3.2"
-  sha256 "d1922debbfcdf34bc9c544628400abbb2a391d4ea14b898f4ca5b57d72215d47"
+  version "0.3.3"
+  sha256 "b33ee96b279dce3d52352cffe8b357520e7de967f080375e089ef5cb4e2aff79"
 
   url "https://ciacoea.com/scarica/Ciacoea_#{version}_aarch64.dmg"
   name "ciàcoea"
